@@ -24,7 +24,7 @@ namespace stgChallenge1
 
     static string getFraction(int n, int d)
     {
-      var decRepeating = new Dictionary<int, string>();
+      var decRepeating = new Dictionary<string, string>();
       var dec = new List<string>();
       int decPart;
       int counter = 0;
@@ -39,10 +39,10 @@ namespace stgChallenge1
         {
           decPart = (rem * 10) / d;
 
-          // if(decrep[dint] == "1")
-          //   decrep[dint] = "> 1";
+          // if(decRepeating[decPart.ToString()] == "1")
+          //   decRepeating[decPart.ToString()] = "> 1";
           
-          decRepeating[decPart] = "1";
+          decRepeating[decPart.ToString()] = "1";
           dec.Add(decPart.ToString());
           rem = (rem * 10) % d;
           counter++;
